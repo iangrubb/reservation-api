@@ -10,7 +10,6 @@ defmodule ReservationsApiWeb.BookingController do
     with {:ok, %Booking{} = booking} <- Reservation.create_booking(booking_params) do
       conn
       |> put_status(:created)
-      |> put_resp_header("location", Routes.booking_path(conn, :show, booking))
       |> render("show.json", booking: booking)
     end
   end
