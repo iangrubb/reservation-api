@@ -7,6 +7,7 @@ defmodule ReservationsApi.Reservation.Room do
     field :occupancy, :integer
     field :price, :integer
     field :room_letter, :string
+    has_many :bookings, ReservationsApi.Reservation.Booking
 
     timestamps()
   end

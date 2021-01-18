@@ -14,6 +14,6 @@ defmodule ReservationsApiWeb.RoomView do
     %{id: room.id,
       price: room.price,
       occupancy: room.occupancy,
-      romo: to_string(room.floor) <> room.room_letter}
+      room: to_string(room.floor) <> room.room_letter}
   end
 end

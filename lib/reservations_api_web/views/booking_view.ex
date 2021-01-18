@@ -12,8 +12,8 @@ defmodule ReservationsApiWeb.BookingView do
 
   def render("booking.json", %{booking: booking}) do
     %{id: booking.id,
-      start: booking.start,
-      end: booking.end,
+      start_date: booking.start_date,
+      end_date: booking.end_date,
       customer_name: booking.customer_name}
   end
 end
