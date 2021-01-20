@@ -15,5 +15,4 @@ defmodule ReservationsApiWeb.RoomController do
     room = Reservation.get_room!(id)
     render(conn, "show.json", room: room)
   end
-
 end

@@ -1,5 +1,4 @@
 defmodule ReservationsApi.Reservation do
-
   import Ecto.Query, warn: false
   alias ReservationsApi.Repo
 
@@ -22,7 +21,7 @@ defmodule ReservationsApi.Reservation do
     Repo.delete_all(Room)
   end
 
-  def get_booking!(id), do: Repo.get!(Booking, id)
+  def get_booking(id), do: Repo.get(Booking, id)
 
   def create_booking(attrs \\ %{}) do
     %Booking{}
@@ -39,5 +38,4 @@ defmodule ReservationsApi.Reservation do
   def delete_booking(%Booking{} = booking) do
     Repo.delete(booking)
   end
-
 end

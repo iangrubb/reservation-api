@@ -21,4 +21,11 @@ defmodule ReservationsApiWeb.FallbackController do
     |> put_view(ReservationsApiWeb.ErrorView)
     |> render(:"404")
   end
+
+  def call(conn, {:no_referenced_entity, id}) do
+    conn
+    |> put_status(:not_found)
+    |> put_view(ReservationsApiWeb.ChangesetView)
+    |> render("error.json", error: "Requested entity with id #{id} does not exist")
+  end
 end

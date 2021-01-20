@@ -11,9 +11,11 @@ defmodule ReservationsApiWeb.RoomView do
   end
 
   def render("room.json", %{room: room}) do
-    %{id: room.id,
+    %{
+      id: room.id,
       price: room.price,
       occupancy: room.occupancy,
-      room: to_string(room.floor) <> room.room_letter}
+      room: to_string(room.floor) <> room.room_letter
+    }
   end
 end

@@ -71,8 +71,16 @@ defmodule ReservationsApi.ReservationTest do
   describe "bookings" do
     alias ReservationsApi.Reservation.Booking
 
-    @valid_attrs %{customer_name: "some customer_name", end: ~D[2010-04-17], start: ~D[2010-04-17]}
-    @update_attrs %{customer_name: "some updated customer_name", end: ~D[2011-05-18], start: ~D[2011-05-18]}
+    @valid_attrs %{
+      customer_name: "some customer_name",
+      end: ~D[2010-04-17],
+      start: ~D[2010-04-17]
+    }
+    @update_attrs %{
+      customer_name: "some updated customer_name",
+      end: ~D[2011-05-18],
+      start: ~D[2011-05-18]
+    }
     @invalid_attrs %{customer_name: nil, end: nil, start: nil}
 
     def booking_fixture(attrs \\ %{}) do
